@@ -1,0 +1,105 @@
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/variables" as *;
+
+.projects {
+  background: $primary-black;
+  width: 100%;
+
+  &__title {
+    color: $primary-white;
+    text-decoration: underline;
+    font-size: 1.5rem;
+
+    @include tablet {
+      font-size: 2rem;
+    }
+
+    @include desktop {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__desc {
+    color: $primary-white;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 500;
+
+    @include tablet {
+      font-size: 1.1rem;
+    }
+
+    @include desktop {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__more {
+    color: $primary-white;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 500;
+
+    @include tablet {
+      font-size: 1.1rem;
+    }
+
+    @include desktop {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__art {
+    border: 1px solid $primary-white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    align-content: center;
+    box-shadow: 4px 4px 10px 0px rgba(255, 255, 255, 0.5);
+
+    @include tablet {
+      width: 50%;
+    }
+  }
+}
+
+.projects-cont {
+  display: flex;
+  flex-direction: column;
+  background: $primary-black;
+  padding: $mobile-margin;
+  gap: 1rem;
+
+  @include tablet {
+    flex-direction: row;
+    padding: 2rem;
+    width: 100%;
+  }
+
+  @include desktop {
+    padding: 2rem 0;
+    margin: 0 auto;
+    max-width: $desktop-max-width;
+  }
+}
+
+.articles-cont {
+  @include tablet {
+    display: flex;
+    width: 50%;
+    gap: 1rem;
+  }
+}
+
+.title-cont {
+  @include tablet {
+    width: 50%;
+    text-align: center;
+    align-content: center;
+  }
+}
