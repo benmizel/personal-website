@@ -1,0 +1,76 @@
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/variables" as *;
+
+.contact {
+    margin: $mobile-margin;
+
+    @include tablet {
+        margin: $tablet-margin;
+    }
+
+    @include desktop {
+        margin: $tablet-margin auto;
+        max-width: $desktop-max-width;
+    }
+
+    &__title {
+        text-decoration: underline;
+        font-size: 1.5rem;
+
+        @include tablet {
+            font-size: 2rem;
+        }
+
+        @include desktop {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        width: 33%;
+        text-align: center;
+
+        @include tablet {
+            width: 50%;
+        }
+    }
+
+    &__image {
+        width: 100%;
+    }
+}
+
+.contact-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    @include tablet {
+        flex-direction: row;
+        width: 100%;
+    }
+}
+
+.link-cont {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+
+    @include tablet {
+        width: 50%;
+        flex-direction: column;
+    }
+}
+
+.gmail {
+    width: 33%;
+
+    @include tablet {
+        width: 7rem;
+
+    }
+    
+}

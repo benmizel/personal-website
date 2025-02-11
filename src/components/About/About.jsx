@@ -2,7 +2,7 @@ import "./About.scss";
 
 const About = () => {
   return (
-    <main className="about" id="about">
+    <section className="about" id="about">
       <div className="about-cont">
         <div className="title-cont">
           <h1 className="about__title">About</h1>
@@ -13,7 +13,7 @@ const About = () => {
           </h2>
         </div>
       </div>
-    </main>
+    </section>
   );
 };
 
