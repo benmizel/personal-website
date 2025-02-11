@@ -1,0 +1,57 @@
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/variables" as *;
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin: $mobile-margin;
+
+    @include tablet {
+        margin: $mobile-margin $tablet-margin $mobile-margin $tablet-margin;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    @include desktop {
+        margin: $mobile-margin auto;
+        max-width: $desktop-max-width;
+    }
+
+    &__logo {
+        width: 10rem;
+        @include tablet {
+            width: 12rem;
+        }
+    }
+
+    &__logo-link {
+        @include tablet {
+            display: flex;
+            width: 30%;
+            align-items: center;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        gap: 1rem;
+        list-style: none;
+    }
+
+    &__item-link {
+        text-decoration: none;
+        color: $primary-black;
+        font-size: 1rem;
+
+        @include tablet {
+            font-size: 1.25rem;
+        }
+
+        // &.active {
+        //     text-decoration: underline;
+        // }
+    }
+
+
+}
