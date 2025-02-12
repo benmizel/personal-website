@@ -2,75 +2,73 @@
 @use "../../styles/partials/variables" as *;
 
 .contact {
-    margin: $mobile-margin;
+  margin: $mobile-margin;
+
+  @include tablet {
+    margin: $tablet-margin;
+  }
+
+  @include desktop {
+    margin: $tablet-margin auto;
+    max-width: $desktop-max-width;
+  }
+
+  &__title {
+    text-decoration: underline;
+    font-size: 1.5rem;
 
     @include tablet {
-        margin: $tablet-margin;
+      font-size: 2rem;
     }
 
     @include desktop {
-        margin: $tablet-margin auto;
-        max-width: $desktop-max-width;
+      font-size: 2.5rem;
     }
+  }
 
-    &__title {
-        text-decoration: underline;
-        font-size: 1.5rem;
+  &__link {
+    text-decoration: none;
+    width: 33%;
+    text-align: center;
 
-        @include tablet {
-            font-size: 2rem;
-        }
-
-        @include desktop {
-            font-size: 2.5rem;
-        }
+    @include tablet {
+      width: 50%;
     }
+  }
 
-    &__link {
-        text-decoration: none;
-        width: 33%;
-        text-align: center;
-
-        @include tablet {
-            width: 50%;
-        }
-    }
-
-    &__image {
-        width: 100%;
-    }
+  &__image {
+    width: 100%;
+  }
 }
 
 .contact-cont {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 
-    @include tablet {
-        flex-direction: row;
-        width: 100%;
-    }
+  @include tablet {
+    flex-direction: row;
+    width: 100%;
+  }
 }
 
 .link-cont {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2rem;
 
-    @include tablet {
-        width: 50%;
-        flex-direction: column;
-    }
+  @include tablet {
+    width: 50%;
+    flex-direction: column;
+  }
 }
 
 .gmail {
-    width: 33%;
+  width: 33%;
 
-    @include tablet {
-        width: 7rem;
-
-    }
-    
+  @include tablet {
+    width: 7rem;
+  }
 }

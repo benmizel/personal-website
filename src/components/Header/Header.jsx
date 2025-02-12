@@ -1,13 +1,8 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import signature from "../../assets/logo/signature.svg";
 import "./Header.scss";
 
 const Header = () => {
-  const checkActive = (match, location) => {
-    // Get the hash from the URL and compare it to the link's target hash
-    return location.hash === match.url;
-  };
-
   return (
     <header className="header">
       <Link to={"/"} className="header__logo-link">
@@ -19,29 +14,20 @@ const Header = () => {
       </Link>
       <ul className="header__nav">
         <li className="header__item">
-          <NavLink
-            to="#about"
-            className="header__item-link"
-          >
+          <a href="#about" className="header__item-link">
             About
-          </NavLink>
+          </a>
         </li>
 
         <li className="header__item">
-          <NavLink
-            to="#projects"
-            className="header__item-link"
-          >
+          <a href="#projects" className="header__item-link">
             Projects
-          </NavLink>
+          </a>
         </li>
         <li className="header__item">
-          <NavLink
-            to="#contact"
-            className="header__item-link"
-          >
+          <a href="#contact" className="header__item-link">
             Contact
-          </NavLink>
+          </a>
         </li>
       </ul>
     </header>

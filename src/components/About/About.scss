@@ -2,70 +2,68 @@
 @use "../../styles/partials/variables" as *;
 
 .about {
-    margin: $mobile-margin;
+  margin: $mobile-margin;
+
+  @include tablet {
+    margin: $tablet-margin;
+  }
+
+  @include desktop {
+    margin: $tablet-margin auto;
+    max-width: $desktop-max-width;
+  }
+
+  &__title {
+    text-decoration: underline;
+    font-size: 1.5rem;
 
     @include tablet {
-        margin: $tablet-margin;
+      font-size: 2rem;
     }
 
     @include desktop {
-        margin: $tablet-margin auto;
-        max-width: $desktop-max-width;
+      font-size: 2.5rem;
+    }
+  }
+
+  &__desc {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 500;
+
+    @include tablet {
+      font-size: 1.1rem;
     }
 
-    &__title {
-        text-decoration: underline;
-        font-size: 1.5rem;
-
-        @include tablet {
-            font-size: 2rem;
-        }
-
-        @include desktop {
-            font-size: 2.5rem;
-        }
-
+    @include desktop {
+      font-size: 1.25rem;
     }
-
-    &__desc {
-        text-align: center;
-        font-size: 1rem;
-        line-height: 1.5;
-        font-weight: 500;
-
-        @include tablet {
-            font-size: 1.1rem;
-        }
-
-        @include desktop {
-            font-size: 1.25rem;
-        }
-    }
+  }
 }
 
 .about-cont {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 
-    @include tablet {
-        flex-direction: row;
-        width: 100%;
-    }
-
+  @include tablet {
+    flex-direction: row;
+    width: 100%;
+  }
 }
 
 .title-cont {
-    @include tablet {
-        width: 50%;
-        text-align: center;
-    }
+  @include tablet {
+    width: 50%;
+    text-align: center;
+  }
 }
 
 .desc-cont {
-    @include tablet {
-        width: 50%;
-        text-align: center;
-    }
+  @include tablet {
+    width: 50%;
+    text-align: center;
+  }
 }

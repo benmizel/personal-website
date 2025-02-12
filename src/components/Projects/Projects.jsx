@@ -10,18 +10,23 @@ const Projects = () => {
           <h1 className="projects__title">Projects</h1>
         </div>
         <div className="articles-cont">
-          <article className="projects__art">
-            <img
-              src={mrlogo}
-              alt="Mr. To do Logo"
-              className="projects__image"
-            />
-            <p className="projects__desc">
-              Mr. To Do is a personal task manager app aimed at helping
-              individuals prioritize and keep track of their own to-do list.
-            </p>
-          </article>
-          <article className="projects__art">
+          <a
+            href="https://mrtodomanager.netlify.app/"
+            className="projects__link"
+          >
+            <article className="projects__art">
+              <img
+                src={mrlogo}
+                alt="Mr. To do Logo"
+                className="projects__image"
+              />
+              <p className="projects__desc">
+                Mr. To Do is a personal task manager app aimed at helping
+                individuals prioritize and keep track of their own to-do list.
+              </p>
+            </article>
+          </a>
+          <article className="projects__art more">
             <h2 className="projects__more">More Projects Coming Soon!</h2>
           </article>
         </div>

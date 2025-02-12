@@ -5,15 +5,15 @@ import Contact from "../components/Contact/Contact";
 import Footer from "../components/Footer/Footer";
 
 const HomePage = () => {
-    return ( 
-        <>
-        <Hero />
-        <About />
-        <Projects />
-        <Contact />
-        <Footer />
-        </>
-     );
-}
- 
+  return (
+    <>
+      <Hero />
+      <About />
+      <Projects />
+      <Contact />
+      <Footer />
+    </>
+  );
+};
+
 export default HomePage;
